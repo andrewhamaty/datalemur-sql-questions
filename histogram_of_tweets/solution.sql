@@ -3,9 +3,9 @@ with total_tweets as (
         T.user_id,
         count(T.tweet_id) as tweet_count_per_user,
     from tweets as T
-    --where year(tweet_date) = '2022'
-    where tweet_date >= '2022-01-01'
-    and tweet_date <= '2022-12-31'
+    --where year(T.tweet_date) = '2022'
+    where T.tweet_date >= '2022-01-01'
+    and T.tweet_date <= '2022-12-31'
     group by T.user_id
 )
 select
