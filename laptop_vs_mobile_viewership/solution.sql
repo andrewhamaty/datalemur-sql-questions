@@ -7,9 +7,7 @@ select
         end) as laptop_views
   , sum(
         case
-            when V.device_type = 'tablet'
-            then 1
-            when V.device_type = 'phone'
+            when V.device_type in ('tablet', 'phone')
             then 1
             else 0
         end) as mobile_views
