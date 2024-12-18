@@ -12,7 +12,7 @@ with times as (
             else 0
         end as opening
     from activities as A
-    join age_breakdown as AB
+    inner join age_breakdown as AB
       on A.user_id = AB.user_id
 )
 select
