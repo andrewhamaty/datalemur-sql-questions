@@ -21,5 +21,5 @@ where DSR.drank <= 3
 order by
     DSR.department_name asc,
     DSR.salary desc,
-    DSR.name
+    DSR.name asc
 ;
