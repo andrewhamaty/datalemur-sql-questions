@@ -9,7 +9,7 @@ with ranked_measurements as (
 ),
 evens_and_odds as (
     select 
-        *,
+        measurement_day,
         case
             when measurement_num % 2 = 1
             then measurement_value
